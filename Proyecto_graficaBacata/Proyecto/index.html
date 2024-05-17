@@ -25,7 +25,7 @@
         .nombre-sitio {
             font-size: 10rem;
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             margin-top: 2rem;
             /* Espacio entre el logo y el título */
         }
@@ -33,6 +33,23 @@
         .nombre-sitio span {
             font-size: 9rem;
             font-weight: bold;
+        }
+        @media screen and (max-width: 670px) {
+            .nombre-sitio {
+                display: flex;
+                font-size: 5rem;
+                flex-direction: column;
+                text-align: center;
+            }
+            .nombre-sitio span{
+                font-size: 5rem;
+            }
+            .col-3{
+                width: 41.66666667%;
+            }
+            .col-8{
+                width: 58.33333333%;
+            }
         }
 
         .logo {
@@ -152,7 +169,7 @@
 <body>
     <header class="bg-dark">
         <div class="container py-3 header-container">
-            <div class="col-4">
+            <div class="col-3">
                 <img src="../Contenido/productos/Logo_negativo.png" alt="Logo" class="logo img-fluid">
             </div>
             <h1 class="nombre-sitio col-8">Graficas <span>Bacatá</span></h1>
@@ -427,7 +444,8 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="producto text-center border p-3">
-                                    <a href="producto4.html"><img src="../Contenido/productos/imagenes_productos/Mugs.jpg"
+                                    <a href="producto4.html"><img
+                                            src="../Contenido/productos/imagenes_productos/Mugs.jpg"
                                             alt="Imagen Producto" class="img-fluid"></a>
                                     <div class="info-producto mt-3">
                                         <h3>Producto 4</h3>
@@ -439,7 +457,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="producto text-center border p-3">
-                                    <a href="producto5.html"><img src="../Contenido/productos/imagenes_productos/Mugs.jpg"
+                                    <a href="producto5.html"><img
+                                            src="../Contenido/productos/imagenes_productos/Mugs.jpg"
                                             alt="Imagen Producto" class="img-fluid"></a>
                                     <div class="info-producto mt-3">
                                         <h3>Producto 5</h3>
@@ -451,7 +470,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="producto text-center border p-3">
-                                    <a href="producto6.html"><img src="../Contenido/productos/imagenes_productos/Mugs.jpg"
+                                    <a href="producto6.html"><img
+                                            src="../Contenido/productos/imagenes_productos/Mugs.jpg"
                                             alt="Imagen Producto" class="img-fluid"></a>
                                     <div class="info-producto mt-3">
                                         <h3>Producto 6</h3>
@@ -608,7 +628,9 @@
                 <div class="col-md-4">
                     <h3 style="background-color: inherit;">Redes Sociales</h3>
                     <ul>
-                        <li><a href="https://www.facebook.com/profile.php?id=100081386747362&name=xhp_nt__fb__action__open_user">Facebook</a></li>
+                        <li><a
+                                href="https://www.facebook.com/profile.php?id=100081386747362&name=xhp_nt__fb__action__open_user">Facebook</a>
+                        </li>
                         <li><a href="#">Twitter</a></li>
                         <li><a href="#">Instagram</a></li>
                     </ul>
