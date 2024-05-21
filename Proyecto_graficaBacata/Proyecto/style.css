@@ -202,6 +202,13 @@ video{
         height: 80vh;
     }
 }
+    @media screen and (min-width:670px) and (max-width:1200px) {
+        .d-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
 /*Footer--------------------------------------*/
 footer {
     background-color: #333333;
