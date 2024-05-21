@@ -179,11 +179,11 @@ video{
     max-width: 100%;
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 670px) {
 
     .contenedor-video{
         justify-content: flex-start;
-        height: 80vh;
+        height: 83vh;
     }
     video{
         height: 40%; 
@@ -199,7 +199,29 @@ video{
     }
     .contenedor-mision{
         justify-content: flex-start;
-        height: 80vh;
+        height: 76vh;
+    }
+}
+@media screen and (min-width:670px) and (max-width: 1200px) {
+
+    .contenedor-video{
+        height: 43vh;
+    }
+    video{
+        height: 60%; 
+        max-width: 100%;
+    }
+    .contenedor-mision img{
+        max-width: 100%;
+        width: 100%;
+    }
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-mision{
+        justify-content: flex-start;
+        height: 63vh;
     }
 }
 /*Footer--------------------------------------*/
