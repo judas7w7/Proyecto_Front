@@ -18,39 +18,6 @@
         crossorigin="anonymous"></script>
 
     <style>
-        body {
-            font-size: 1.2rem;
-        }
-
-        .nombre-sitio {
-            font-size: 10rem;
-            font-weight: bold;
-            text-align: left;
-            margin-top: 2rem;
-            /* Espacio entre el logo y el título */
-        }
-
-        .nombre-sitio span {
-            font-size: 9rem;
-            font-weight: bold;
-        }
-        @media screen and (max-width: 670px) {
-            .nombre-sitio {
-                display: flex;
-                font-size: 5rem;
-                flex-direction: column;
-                text-align: center;
-            }
-            .nombre-sitio span{
-                font-size: 5rem;
-            }
-            .col-3{
-                width: 41.66666667%;
-            }
-            .col-8{
-                width: 58.33333333%;
-            }
-        }
 
         .logo {
             height: 200px;
@@ -167,40 +134,43 @@
 </head>
 
 <body>
-    <header class="bg-dark">
-        <div class="container py-3 header-container">
-            <div class="col-3">
+    <header class="bg-dark sticky-top w-100">
+        <div class="container py-3 d-flex justify-content-between align-items-center">
+            <div class="logo-container me-2">
                 <img src="../Contenido/productos/Logo_negativo.png" alt="Logo" class="logo img-fluid">
             </div>
-            <h1 class="nombre-sitio col-8">Gráficas <span>Bacatá</span></h1>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    <img src="../Contenido/productos/icono_home.png" alt="icono home"
+                                        class="icono-home">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="galeria.html">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Inicio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="galeria.html">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <div class="container mt-5">
         <div class="hero bg-light p-5 rounded">

@@ -18,9 +18,10 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 2;
 }
+
 
 /* Globales */
 
@@ -179,11 +180,11 @@ video{
     max-width: 100%;
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 670px) {
 
     .contenedor-video{
         justify-content: flex-start;
-        height: 80vh;
+        height: 83vh;
     }
     video{
         height: 40%; 
@@ -199,9 +200,38 @@ video{
     }
     .contenedor-mision{
         justify-content: flex-start;
-        height: 80vh;
+        height: 76vh;
     }
 }
+@media screen and (min-width:670px) and (max-width: 1200px) {
+
+    .contenedor-video{
+        height: 43vh;
+    }
+    video{
+        height: 60%; 
+        max-width: 100%;
+    }
+    .contenedor-mision img{
+        max-width: 100%;
+        width: 100%;
+    }
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-mision{
+        justify-content: flex-start;
+        height: 63vh;
+    }
+}
+    @media screen and (min-width:670px) and (max-width:1200px) {
+        .d-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
 /*Footer--------------------------------------*/
 footer {
     background-color: #333333;
@@ -211,4 +241,70 @@ footer {
 footer h3{
     color: white;
     background-color: #333333;
+}
+.icono-home {
+    height: 1.5em;
+    width: auto;
+    vertical-align: middle;
+}
+@media (min-width: 670px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+
+    header .d-flex {
+        flex-direction: row;
+    }
+}
+
+.logo {
+    max-width: 200px;
+    max-height: 130px;
+}
+@media (max-width: 670px) {
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+
+    .col-3 {
+        width: 41.66666667%;
+    }
+
+    .col-8 {
+        width: 58.33333333%;
+    }
+
+    .navbar-nav .nav-link {
+        white-space: nowrap;
+    }
+}
+@media (max-width: 670px) {
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+}
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
 }
