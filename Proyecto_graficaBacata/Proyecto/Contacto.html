@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
         body {
-            font-size: 1.2rem;
+            font-size: 1.4rem; /* Incrementa el tamaño del texto */
+            padding-top: 90px; /* Ajusta este valor según la altura de tu header */
+        }
+
+        header {
+            background-color: #343a40; /* Color de fondo oscuro */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
         }
 
         .nombre-sitio {
@@ -111,7 +117,7 @@
         }
 
         .form-control {
-            font-size: 1.2rem;
+            font-size: 1.4rem; /* Incrementa el tamaño del texto de los formularios */
         }
 
         .btn-primary {
@@ -141,12 +147,24 @@
 
         @media (max-width: 670px) {
             .navbar-nav .nav-item {
-                margin-right: 10px; 
+                margin-right: 10px;
             }
         }
 
-        
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
 
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
     </style>
 </head>
 
@@ -159,16 +177,14 @@
             </div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav align-items-center">
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">
-                                    <img src="../Contenido/productos/icono_home.png" alt="icono home"
-                                        class="icono-home">
+                                    <img src="../Contenido/productos/icono_home.png" alt="icono home" class="icono-home">
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -190,7 +206,6 @@
         </div>
     </header>
 
-
     <div class="container mt-5">
         <div class="hero bg-light p-5 rounded">
             <h2 class="text-center">Contáctanos</h2>
@@ -201,33 +216,14 @@
     <section class="contenedor mt-5">
         <div class="row">
             <div class="col-md-6">
-                <h3 class="text-center">Formulario de Contacto</h3>
-                <form>
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Tu email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="mensaje" rows="5" placeholder="Tu mensaje"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <h3 class="text-center">Información de Contacto</h3>
+                <h3 class="text-center">Contáctanos</h3>
                 <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</p>
                 <p><strong>Teléfono:</strong> +123 456 7890</p>
                 <p><strong>Email:</strong> info@graficasbacata.com</p>
                 <h4 class="text-center mt-4">Síguenos en nuestras redes sociales</h4>
                 <ul class="list-inline text-center">
                     <li class="list-inline-item">
-                        <a href="https://www.facebook.com/profile.php?id=100081386747362&name=xhp_nt__fb__action__open_user"
-                            class="text-dark">
+                        <a href="https://www.facebook.com/profile.php?id=100081386747362&name=xhp_nt__fb__action__open_user" class="text-dark">
                             <img src="../Contenido/productos/facebook.png" alt="Facebook" style="width: 40px;">
                         </a>
                     </li>
@@ -242,22 +238,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <div class="container mt-5">
-        <div class="hero bg-light p-5 rounded">
-            <h2 class="text-center">Contáctanos</h2>
-            <p class="text-center">¿Tienes alguna pregunta? ¡Nos encantaría saber de ti!</p>
-        </div>
-    </div>
-
-    <section class="contenedor mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="text-center">Formulario de Contacto</h3>
-                <form>
+                <form class="mt-4">
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
@@ -267,36 +248,17 @@
                         <input type="email" class="form-control" id="email" placeholder="Tu email">
                     </div>
                     <div class="mb-3">
-                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <label for="mensaje" class="form-label">Motivo del Contacto</label>
                         <textarea class="form-control" id="mensaje" rows="5" placeholder="Tu mensaje"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
             <div class="col-md-6">
-                <h3 class="text-center">Información de Contacto</h3>
-                <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</p>
-                <p><strong>Teléfono:</strong> +123 456 7890</p>
-                <p><strong>Email:</strong> info@graficasbacata.com</p>
-                <h4 class="text-center mt-4">Síguenos en nuestras redes sociales</h4>
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/profile.php?id=100081386747362&name=xhp_nt__fb__action__open_user"
-                            class="text-dark">
-                            <img src="../Contenido/productos/facebook.png" alt="Facebook" style="width: 40px;">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-dark">
-                            <img src="../Contenido/productos/twitter.png" alt="Twitter" style="width: 40px;">
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#" class="text-dark">
-                            <img src="../Contenido/productos/instagram.png" alt="Instagram" style="width: 40px;">
-                        </a>
-                    </li>
-                </ul>
+                <h3 class="text-center">Nuestra Ubicación</h3>
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799095765!2d-74.25987568789045!3d40.69767006380717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2451d8ba23b63%3A0x8a8e0b3a5b96c12f!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2sco!4v1626260166037!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -323,9 +285,7 @@
                 <div class="col-md-4">
                     <h3 style="background-color: inherit;">Redes Sociales</h3>
                     <ul>
-                        <li><a
-                                href="https://www.facebook.com/profile.php?id=100081386747362&name=xhp_nt__fb__action__open_user">Facebook</a>
-                        </li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100081386747362&name=xhp_nt__fb__action__open_user">Facebook</a></li>
                         <li><a href="#">Twitter</a></li>
                         <li><a href="#">Instagram</a></li>
                     </ul>
