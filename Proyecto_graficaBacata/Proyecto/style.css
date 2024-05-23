@@ -261,7 +261,7 @@ footer h3{
         flex-direction: row;
     }
 
-    .d-flex {
+    header .d-flex {
         flex-direction: row;
     }
 }
